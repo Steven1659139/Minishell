@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 10:10:05 by cemenjiv          #+#    #+#             */
-/*   Updated: 2022/12/07 12:42:54 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2022/12/07 20:55:30 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,14 @@
 # include <stdio.h>
 # include <string.h>
 # include "../Libft/libft.h"
-# include "../readline/readline.h"
-# include "../readline/history.h"
+#include "../readline/chardefs.h"
+#include "../readline/history.h"
+#include "../readline/keymaps.h"
+#include "../readline/readline.h"
+#include "../readline/rlconf.h"
+#include "../readline/rlstdc.h"
+#include "../readline/rltypedefs.h"
+#include "../readline/tilde.h"
 # include <errno.h>
 # include <dirent.h>
 # include <unistd.h>

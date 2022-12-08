@@ -6,3 +6,4 @@ minishell
 minishell.dSYM
 *.o
 TODO
+Dockerfile

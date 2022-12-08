@@ -10,7 +10,7 @@ SRCS 			= $(addprefix $(SRCS_DIR), $(SRCS_FILES))
 
 CC 				= @gcc
 CFLAGS 			= -Werror -Wall -Wextra -g
-READLINE 		=  -lcurses readline/libreadline.a  readline/libhistory.a
+READLINE 		= -lcurses lib/libreadline.a lib/libhistory.a
 OBJS_DIR		= objs/
 OBJS 			= $(patsubst $(SRCS_DIR)%.c, $(OBJS_DIR)%.o, $(SRCS))
 
@@ -28,17 +28,15 @@ $(OBJS_DIR)%.o: $(SRCS_DIR)%.c
 
 all: 			objs $(NAME)
 
-$(NAME): 		sub $(OBJS)
+$(NAME): 		$(OBJS)
+				@echo "Compiling 🌪 🔥🌊"
 				@$(MAKE) -C ./Libft
-				@cd ./readline && ./configure
-				@$(MAKE) -C ./readline everything
-				@$(CC) $(CFLAGS) $(OBJS) $(READLINE)   ./Libft/libft.a -o $(NAME)
+				@$(CC) $(CFLAGS) $(OBJS) $(READLINE) ./Libft/libft.a -o $(NAME)
 				@echo "$(GREEN)Everything is top shape tiguidou 🐥$(RESET_COLOR)"
 
 clean:
 				@echo "Cleaning 🌪 🔥🌊"
 				@$(MAKE) -C ./Libft fclean
-				@$(MAKE) -C ./readline clean
 				@rm -rf $(OBJS)
 				@rm -rf $(OBJS_DIR)
 
