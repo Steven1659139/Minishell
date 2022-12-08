@@ -6,7 +6,7 @@
 /*   By: cemenjiv <cemenjiv@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 10:10:05 by cemenjiv          #+#    #+#             */
-/*   Updated: 2022/12/07 20:55:30 by cemenjiv         ###   ########.fr       */
+/*   Updated: 2022/12/07 23:48:49 by cemenjiv         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@
 #include "../readline/rlstdc.h"
 #include "../readline/rltypedefs.h"
 #include "../readline/tilde.h"
+# include <readline/history.h>
+# include <readline/readline.h>
 # include <errno.h>
 # include <dirent.h>
 # include <unistd.h>

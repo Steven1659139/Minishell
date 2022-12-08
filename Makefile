@@ -28,11 +28,21 @@ $(OBJS_DIR)%.o: $(SRCS_DIR)%.c
 
 all: 			objs $(NAME)
 
+ifeq ($(shell arch), i386)
 $(NAME): 		$(OBJS)
-				@echo "Compiling 🌪 🔥🌊"
+				@echo "Compiling for MacOS🌪 🔥🌊"
 				@$(MAKE) -C ./Libft
 				@$(CC) $(CFLAGS) $(OBJS) $(READLINE) ./Libft/libft.a -o $(NAME)
 				@echo "$(GREEN)Everything is top shape tiguidou 🐥$(RESET_COLOR)"
+endif
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S), Linux)
+$(NAME): 		$(OBJS)
+				@echo "Compiling for Linux 🌪 🔥🌊"
+				@$(MAKE) -C ./Libft
+				@$(CC) $(CFLAGS) $(OBJS) -lreadline ./Libft/libft.a -o $(NAME)
+				@echo "$(GREEN)Everything is top shape tiguidou 🐥$(RESET_COLOR)"
+endif
 
 clean:
 				@echo "Cleaning 🌪 🔥🌊"
