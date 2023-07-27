@@ -33,7 +33,7 @@ Dans ce projet, nous avons recréé un shell UNIX de base. Il permet de lire et 
     Une fois le shell lancé, vous pouvez commencer à taper des commandes.
 
 3. **Commandes** :
-   Minishell supporte les commandes de base comme `echo`, `cd`, `setenv`, `unsetenv`, `env`, `exit` et d'autres. De plus, il comprend les redirections (`<`, `>`, `>>`) et les pipes (`|`).
+   Minishell supporte les commandes de base comme `echo`, `cd`, `export`, `unset`, `env`, `exit` et d'autres. De plus, il comprend les redirections (`<`, `>`, `>>`) et les pipes (`|`).
 
     Par exemple, pour changer le répertoire de travail, utilisez la commande `cd` suivie du chemin du répertoire :
 
