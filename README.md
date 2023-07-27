@@ -52,9 +52,3 @@ Dans ce projet, nous avons recréé un shell UNIX de base. Il permet de lire et 
     ```bash
     exit
     ```
-
-## Licence
-
-Ce projet est sous licence [MIT](LICENSE).
-
-
